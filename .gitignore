@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next / build output
+.next/
+out/
+build/
+dist/
+
+# local env & secrets
+.env
+.env.*
+!.env.example
+
+# logs & caches
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
