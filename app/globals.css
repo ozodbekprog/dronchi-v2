@@ -12973,3 +12973,202 @@ button.video-card {
     width: 100%;
   }
 }
+
+/* =========================================================
+   Flight banner (BILIM → MASHQ → PARVOZ)
+   ========================================================= */
+.flight-section {
+  padding-top: 0;
+}
+
+.flight-banner {
+  position: relative;
+  container-type: inline-size;
+  border-radius: 26px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #e9f2fd 0%, #e3eefb 100%);
+  box-shadow: var(--shadow);
+}
+
+[data-theme="night"] .flight-banner {
+  background: linear-gradient(180deg, #0c1830 0%, #0a1425 100%);
+  box-shadow: var(--shadow);
+}
+
+.flight-scene {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.flight-scene-mobile {
+  display: none;
+}
+
+.fb-card {
+  fill: url(#fb-card-day);
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 3;
+}
+
+[data-theme="night"] .fb-card {
+  fill: url(#fb-card-night);
+  stroke: rgba(90, 120, 170, 0.35);
+}
+
+.fb-ribbon {
+  fill: #ffffff;
+  opacity: 0.48;
+}
+
+[data-theme="night"] .fb-ribbon {
+  opacity: 0.055;
+}
+
+.fb-ring {
+  opacity: 0.3;
+}
+
+[data-theme="night"] .fb-ring {
+  opacity: 0.04;
+}
+
+.fb-path-halo {
+  fill: none;
+  stroke: url(#fb-path-day);
+  stroke-width: 16;
+  stroke-linecap: round;
+  opacity: 0.16;
+}
+
+.fb-path {
+  fill: none;
+  stroke: url(#fb-path-day);
+  stroke-width: 4.5;
+  stroke-dasharray: 20 16;
+  stroke-linecap: round;
+}
+
+[data-theme="night"] .fb-path-halo {
+  stroke: url(#fb-path-night);
+  opacity: 0.22;
+}
+
+[data-theme="night"] .fb-path {
+  stroke: url(#fb-path-night);
+}
+
+.fb-caption-html {
+  position: absolute;
+  left: 53.2%;
+  top: 64.4%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font);
+  font-size: 1.235cqw;
+  font-weight: 700;
+  letter-spacing: 0.244em;
+  color: #22375d;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+[data-theme="night"] .fb-caption-html {
+  color: #e7efff;
+}
+
+.fb-caption-html-m {
+  display: none;
+}
+
+.flight-scene-mobile .fb-path-halo,
+.flight-scene-mobile .fb-path {
+  stroke: url(#fbm-path-day);
+}
+
+[data-theme="night"] .flight-scene-mobile .fb-path-halo,
+[data-theme="night"] .flight-scene-mobile .fb-path {
+  stroke: url(#fbm-path-night);
+}
+
+.fb-controller {
+  filter: drop-shadow(0 30px 46px rgba(18, 44, 86, 0.2));
+}
+
+.fb-drone-img {
+  filter: drop-shadow(0 26px 40px rgba(18, 44, 86, 0.22));
+}
+
+[data-theme="night"] .fb-controller {
+  filter: brightness(0.86) saturate(1.05) drop-shadow(0 26px 44px rgba(0, 0, 0, 0.5));
+}
+
+[data-theme="night"] .fb-drone-img {
+  filter: brightness(1.08) drop-shadow(0 26px 44px rgba(0, 0, 0, 0.5));
+}
+
+.fb-night-glow {
+  opacity: 0;
+}
+
+[data-theme="night"] .fb-night-glow {
+  opacity: 1;
+}
+
+.fb-drone-static {
+  display: none;
+}
+
+.fb-dot-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fb-dot-pulse 4.6s ease-in-out infinite;
+}
+
+@keyframes fb-dot-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.88);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 760px) {
+  .flight-scene-desktop {
+    display: none;
+  }
+
+  .flight-scene-mobile {
+    display: block;
+  }
+
+  .fb-caption-html {
+    display: none;
+  }
+
+  .fb-caption-html-m {
+    display: block;
+    left: 50%;
+    top: 89.6%;
+    font-size: 4.4cqw;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fb-drone-anim {
+    display: none;
+  }
+
+  .fb-drone-static {
+    display: inline;
+  }
+
+  .fb-dot-halo {
+    animation: none;
+    opacity: 0.7;
+  }
+}
