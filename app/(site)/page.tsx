@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import HomeHero from "@/components/HomeHero";
 import Reveal from "@/components/Reveal";
-import FlightPath from "@/components/FlightPath";
 import FlightBanner from "@/components/FlightBanner";
 import CourseTabs from "@/components/CourseTabs";
 import Products from "@/components/Products";
@@ -170,7 +169,7 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <FlightPath />
+          <FlightBanner />
         </div>
       </section>
 
@@ -513,8 +512,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <FlightBanner />
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">

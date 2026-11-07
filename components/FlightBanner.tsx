@@ -71,13 +71,11 @@ function Defs({
 
 export default function FlightBanner() {
   return (
-    <section className="section flight-section">
-      <div className="container">
-        <div
-          className="flight-banner"
-          role="img"
-          aria-label="BILIM → MASHQ → PARVOZ — boshqaruv pultidan dronning parvoz yo'li"
-        >
+    <div
+      className="flight-banner"
+      role="img"
+      aria-label="BILIM → MASHQ → PARVOZ — boshqaruv pultidan dronning parvoz yo'li"
+    >
           <svg
             className="flight-scene flight-scene-desktop"
             viewBox="0 0 3320 530"
@@ -125,6 +123,14 @@ export default function FlightBanner() {
               <image
                 className="fb-controller"
                 href="/images/flight-controller.webp"
+                x="289"
+                y="45"
+                width="544"
+                height="445"
+              />
+              <image
+                className="fb-controller fb-controller-night"
+                href="/images/flight-controller-night.webp"
                 x="289"
                 y="45"
                 width="544"
@@ -210,6 +216,14 @@ export default function FlightBanner() {
                 width="380"
                 height="311"
               />
+              <image
+                className="fb-controller fb-controller-night"
+                href="/images/flight-controller-night.webp"
+                x="70"
+                y="300"
+                width="380"
+                height="311"
+              />
 
               <g className="fb-drone-static" transform="translate(940 269) rotate(-4)">
                 <image
@@ -258,8 +272,6 @@ export default function FlightBanner() {
           <span className="fb-caption-html fb-caption-html-m" aria-hidden="true">
             BILIM → MASHQ → PARVOZ
           </span>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

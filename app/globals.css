@@ -12977,12 +12977,9 @@ button.video-card {
 /* =========================================================
    Flight banner (BILIM → MASHQ → PARVOZ)
    ========================================================= */
-.flight-section {
-  padding-top: 0;
-}
-
 .flight-banner {
   position: relative;
+  margin-top: 36px;
   container-type: inline-size;
   border-radius: 26px;
   overflow: hidden;
@@ -13094,12 +13091,21 @@ button.video-card {
   filter: drop-shadow(0 30px 46px rgba(18, 44, 86, 0.2));
 }
 
-.fb-drone-img {
-  filter: drop-shadow(0 26px 40px rgba(18, 44, 86, 0.22));
+.fb-controller-night {
+  display: none;
 }
 
 [data-theme="night"] .fb-controller {
-  filter: brightness(0.86) saturate(1.05) drop-shadow(0 26px 44px rgba(0, 0, 0, 0.5));
+  display: none;
+}
+
+[data-theme="night"] .fb-controller-night {
+  display: inline;
+  filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.45));
+}
+
+.fb-drone-img {
+  filter: drop-shadow(0 26px 40px rgba(18, 44, 86, 0.22));
 }
 
 [data-theme="night"] .fb-drone-img {
